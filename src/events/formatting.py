@@ -32,7 +32,7 @@ id_to_name = {1: "word",
 
 ########################################################################################################################
 # STIMULI PROCESSING                                                                                                   #
-########################################################################################################################
+# -------------------------------------------------------------------------------------------------------------------- #
 # Processing related to stimuli prior to running the dataset generation pipeline. Can be run independently of the      #
 # said pipeline. It can also be combined with manual correction.                                                       #
 # `format_event_data` can be used to convert `event.tsv` into cleaner format                                           #

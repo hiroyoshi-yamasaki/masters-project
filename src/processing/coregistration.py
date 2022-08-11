@@ -4,7 +4,7 @@ from mne import Info, setup_source_space, make_bem_model, make_bem_solution, mak
 
 ########################################################################################################################
 # COREGISTRATION                                                                                                       #
-########################################################################################################################
+# -------------------------------------------------------------------------------------------------------------------- #
 # Handles coregistration calculation for MEG data. Subject specific forward models are generated from coregistraion.   #
 # Details about coregistration is found here: https://mne.tools/stable/auto_tutorials/forward/25_automated_coreg.html  #
 ########################################################################################################################
