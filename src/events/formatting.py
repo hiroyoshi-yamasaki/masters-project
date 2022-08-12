@@ -284,6 +284,8 @@ def _find_sentence(word_list, stimuli_text) -> Union[None, int]:
     :param word_list: list of words that should form a sentence
     :param stimuli_text: content of the `stimuli.txt` file
     :return:
+        sentence_number: sentence ID
+        or None
     """
 
     stimuli_list = stimuli_text.splitlines()
