@@ -1,7 +1,7 @@
 import logging
 from math import isnan
 from pathlib import Path
-from typing import List
+from typing import List, Union
 import re
 import numpy as np
 import pandas as pd
@@ -216,7 +216,7 @@ def _match_event(events, sample_list, type_list, onset_list, form_list):
         form_list.append(form)
 
 
-def _add_sentence_column(df: pd.DataFrame, stimuli_text: str) -> List[pd.DataFrame, list]:
+def _add_sentence_column(df: pd.DataFrame, stimuli_text: str) -> List[Union[pd.DataFrame, list]]:
     """
     Add new columns `sentence` and `position` to the clean dataframe. `sentence` corresponds to the unique sentence ID
     and `position` corresponds to the position of the word within tht sentence
@@ -249,6 +249,14 @@ def _add_sentence_column(df: pd.DataFrame, stimuli_text: str) -> List[pd.DataFra
 
 
 def _modify_df(df: pd.DataFrame, word_list, stimuli_text, rejected_list):
+    """
+
+    :param df: clean dataframe
+    :param word_list:
+    :param stimuli_text:
+    :param rejected_list:
+    :return:
+    """
     # todo comment
 
     if word_list is not None:
