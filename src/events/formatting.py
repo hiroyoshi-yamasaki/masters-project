@@ -278,7 +278,7 @@ def _modify_df(df: pd.DataFrame, word_list, stimuli_text, rejected_list):
     return df
 
 
-def _find_sentence(word_list, stimuli_text) -> None:
+def _find_sentence(word_list, stimuli_text) -> Union[None, int]:
     """
     Find sentence from word list and return the sentence ID
     :param word_list: list of words that should form a sentence
