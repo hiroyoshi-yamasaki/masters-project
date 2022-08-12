@@ -1,0 +1,121 @@
+ID,Word 1,Word 2,Lemma,Lexical Frequency,Phonemes 1,Phonemes 2,No. phonemes,No. syllables,No. graphemes,Number,Person,Tense
+121,je,pourrai,pouvoir,23.11,ʒə,pu.ʁe ,6,3,9,singular,1,future
+122,je,soulève,soulever,17.5,ʒə,su.lɛv,7,3,9,singular,1,present
+123,je,décidai,décider,11.08,ʒə,de.si.de,8,4,9,singular,1,past historic
+124,je,dégage,dégager,10.34,ʒə,de.ɡaʒ,7,3,8,singular,1,present
+125,je,dérange,déranger,10.81,ʒə,de.ʁɑ̃ʒ ,7,3,9,singular,1,present
+126,je,sonne,sonner,16.82,ʒə,sɔn ,5,2,7,singular,1,present
+127,je,respire,respirer,17.77,ʒə,ʁɛs.piʁ ,8,3,9,singular,1,present
+128,je,ferai,faire,31.69,ʒə,fə.ʁe ,6,3,7,singular,1,future
+129,je,préfère,préférer,36.15,ʒə,pʁe.fɛʁ ,8,3,9,singular,1,present
+130,je,dessine,dessiner,10.68,ʒə,de.sin,7,3,9,singular,1,present
+131,je,pardonne,pardonner,12.3,ʒə,paʁ.dɔn ,8,3,10,singular,1,present
+132,je,secoue,secouer,17.64,ʒə,sə.ku ,6,3,8,singular,1,present
+133,je,propose,proposer,21.55,ʒə,pʁɔ.poz ,8,3,9,singular,1,present
+134,je,concerne,concerner,26.42,ʒə,kɔ̃.sɛʁn ,8,3,10,singular,1,present
+135,je,fonce,foncer,12.23,ʒə,fɔ̃s,5,3,7,singular,1,present
+136,je,salue,saluer,11.01,ʒə,sa.ly,6,3,7,singular,1,present
+137,je,trouvai,trouver,18.51,ʒə,tʁu.ve,7,3,9,singular,1,past historic
+138,je,regrette,regretter,21.55,ʒə,ʁə.ɡʁɛt,8,3,10,singular,1,present
+139,je,demandai,demander,31.49,ʒə,də.mɑ̃.de,8,4,10,singular,1,past historic
+140,je,préfère,préférer,36.15,ʒə,pʁe.fɛʁ ,8,3,9,singular,1,present
+141,tu,tais,taire,17.43,ty,tɛ,4,2,6,singular,2,present
+142,tu,parles,parler,35.34,ty,paʁl,6,2,8,singular,2,present
+143,tu,devrais,devoir,36.49,ty,də.vʁɛ,7,3,9,singular,2,conditional
+144,tu,espérais,espérer,12.64,ty,ɛs.pe.ʁɛ,8,4,10,singular,2,imperfect
+145,tu,ignorais,ignorer,10.61,ty,i.ɲɔ.ʁɛ,7,4,10,singular,2,imperfect
+146,tu,dors,dormir,13.92,ty,dɔʁ ,5,2,6,singular,2,present
+147,tu,dirais,dire,16.76,ty,di.ʁɛ,6,3,8,singular,2,conditional
+148,tu,sors,sortir,25.47,ty,sɔʁ ,5,3,6,singular,2,present
+149,tu,aimerais,aimer,36.01,ty,ɛm.ʁɛ ,7,3,10,singular,2,conditional
+150,tu,faisais,faire,60.54,ty,fə.zɛ,6,3,9,singular,2,imperfect
+151,tu,vivais,vivre,10.81,ty,vi.vɛ ,6,3,8,singular,2,imperfect
+152,tu,promets,promettre,12.3,ty,pʁɔ.mɛ ,7,3,9,singular,2,present
+153,tu,reviens,revenir,22.36,ty,ʁə.vjɛ̃ ,7,3,9,singular,2,present
+154,tu,voyais,voir,90.27,ty,vwa.jɛ ,7,3,8,singular,2,imperfect
+155,tu,irais,aller,11.96,ty,i.ʁɛ ,5,3,7,singular,2,conditional
+156,tu,restais,rester,13.58,ty,ʁɛs.tɛ,7,3,9,singular,2,imperfect
+157,tu,devais,devoir,53.38,ty,də.vɛ,6,3,8,singular,2,imperfect
+158,tu,essayais,essayer,15.27,ty,e.sɛ.jɛ,7,4,10,singular,2,imperfect
+159,tu,écoutais,écouter,16.62,ty,e.ku.tɛ,7,4,10,singular,2,imperfect
+160,tu,réponds,répondre,28.65,ty,ʁe.pɔ̃,6,3,9,singular,2,present
+161,il,crut,croire,34.93,il,kʁy,5,2,6,singular,3,past historic
+162,il,pleut,pleuvoir,10.41,il,plø,5,2,7,singular,3,present
+163,il,lança,lancer,38.72,il,lɑ̃.sa,6,3,7,singular,3,past historic
+164,il,agite,agiter,12.16,il,a.ʒit,6,3,7,singular,3,present
+165,il,appuie,appuyer,15.68,il,a.pɥi,6,3,8,singular,3,present
+166,il,exige,exiger,14.53,il,ɛɡ.ziʒ,7,3,7,singular,3,present
+167,il,écrase,écraser,13.58,il,e.kʁaz,7,3,8,singular,3,present
+168,il,partit,partir,28.78,il,paʁ.ti,7,3,8,singular,3,past historic
+169,il,emporte,emporter,16.49,il,ɑ̃.pɔʁt ,7,3,9,singular,3,present
+170,il,étendait,étendre,13.99,il,e.tɑ̃.dɛ,7,4,10,singular,3,imperfect
+171,il,ramassa,ramasser,11.82,il,ʁa.ma.sa,8,4,9,singular,3,past historic
+172,il,désirait,désirer,14.05,il,de.zi.ʁɛ,8,4,10,singular,3,imperfect
+173,il,écrivait,écrire,25.68,il,e.kʁi.vɛ,8,4,10,singular,3,imperfect
+174,il,reconnut,reconnaitre,25.74,il,ʁə.kɔ.ny,8,4,10,singular,3,past historic
+175,il,détourna,détourner,11.22,il,de.tuʁ.na,9,4,10,singular,3,past historic
+176,il,retrouva,retrouver,28.24,il,ʁə.tʁu.va,9,4,10,singular,3,past historic
+177,il,marcher,marcher,80.88,il,,7,,9,singular,3,
+178,il,portait,porter,113.85,il,pɔʁ.tɛ,7,2,9,singular,3,imperfect
+179,il,parut,paraître,71.28,il,pa.ʁy,6,2,7,singular,3,past historic
+180,il,entra,entrer,51.96,il,ɑ̃.tʁa,6,2,7,singular,3,past historic
+181,elle,fît,faire,14.19,ɛl,fi,4,2,7,singular,3,imperfect subjunctive
+182,elle,bat,battre,17.97,ɛl,ba ,4,2,7,singular,3,present
+183,elle,tint,tenir,15.2,ɛl,tɛ̃,4,2,8,singular,3,past historic
+184,elle,perd,perdre,25,ɛl,pɛʁ ,5,2,8,singular,3,present
+185,elle,cessa,cesser,16.28,ɛl,se.sa,6,3,9,singular,3,past historic
+186,elle,dépend,dépendre,15.2,ɛl,de.pɑ̃ ,6,3,10,singular,3,present
+187,elle,emmène,emmener,17.23,ɛl,ɑ̃.mɛn ,6,3,10,singular,3,present
+188,elle,impose,imposer,12.77,ɛl,ɛ̃.poz,6,3,10,singular,3,present
+189,elle,faillit,faillir,16.22,ɛl,fa.ji,6,3,11,singular,3,present/past historic
+190,elle,jaillit,jaillir,10.07,ɛl,ʒa.ji,6,3,11,singular,3,present/past historic
+191,elle,prétend,prétendre,13.24,ɛl,pʁe.tɑ̃,7,3,11,singular,3,present
+192,elle,arracha,arracher,11.82,ɛl,a.ʁa.ʃa,7,4,11,singular,3,past historic
+193,elle,éteignit,éteindre,11.15,ɛl,e.tɛ.ɲi,7,4,12,singular,3,past historic
+194,elle,essuya,essuyer,12.84,ɛl,e.sɥi.ja,8,4,10,singular,3,past historic
+195,elle,arrêta,arrêter,93.31,ɛl,a.ʁɛ.ta,7,4,10,singular,3,past historic
+196,elle,rendait,rendre,58.24,ɛl,ʁɑ̃.dɛ,6,3,11,singular,3,imperfect
+197,elle,tirait,tirer,34.86,ɛl,ti.ʁɛ,6,3,10,singular,3,imperfect
+198,elle,montra,montrer,29.46,ɛl,mɔ̃.tʁa,7,3,10,singular,3,past historic
+199,elle,fout,foutre,25.2,ɛl,fu,4,2,8,singular,3,present
+200,elle,essaya,essayer,24.66,ɛl,e.sɛ.ja,7,3,10,singular,3,past historic
+201,vous,verrez,voir,18.51,vu,vɛ.ʁe ,6,3,10,plural,3,future
+202,vous,aimez,aimer,18.38,vu.z,e.me,6,3,9,plural,2,present
+203,vous,donnez,donner,13.65,vu,dɔ.ne,6,3,10,plural,2,present
+204,vous,restez,rester,10.81,vu,ʁɛs.te,7,3,10,plural,2,present
+205,vous,ferez,faire,10.54,vu,fə.ʁe ,6,3,9,plural,2,future
+206,vous,laissez,laisser,31.42,vu,lɛ.se,6,3,11,plural,2,present
+207,vous,devez,devoir,16.15,vu,də.ve,6,3,9,plural,2,present
+208,vous,direz,dire,10,vu,di.ʁe,6,3,9,plural,2,future
+209,vous,trouvez,trouver,14.12,vu,tʁu.ve,7,3,11,plural,2,present
+210,vous,écoutez,écouter,24.8,vu.z,e.ku.te,8,4,11,plural,2,present
+211,vous,pourriez,pouvoir,12.09,vu,pu.ʁje ,7,3,12,plural,2,conditional
+212,vous,devriez,devoir,11.89,vu,də.vʁi.je,8,4,11,plural,2,conditional
+213,vous,oubliez,oublier,11.15,vu.z,u.bli.je,9,4,11,plural,2,present
+214,vous,regardez,regarder,30.95,vu,ʁə.ɡaʁ.de,9,4,12,plural,2,present
+215,vous,pourrez,pouvoir,11.08,vu,pu.ʁe ,6,3,11,plural,2,future
+216,vous,imaginez,imaginer,10.54,vu.z,i.ma.ʒi.ne,10,5,12,plural,2,present
+217,vous,venez,venir,41.42,vu,və.ne,6,3,9,plural,2,present
+218,vous,attendez,attendre,19.86,vu.z,a.tɑ̃.de,8,4,12,plural,2,present
+219,vous,appelez,appeler,11.42,vu.z,a.ple,8,3,11,plural,2,present
+220,vous,parlez,parler,22.03,vu,paʁ.le,7,3,10,plural,2,present
+221,elles,jouent,jouer,14.59,ɛl,ʒu,4,2,11,plural,3,present
+222,elles,savent,savoir,44.53,ɛl,sav ,5,2,11,plural,3,present
+223,elles,vivent,vivre,19.39,ɛl,viv ,5,2,11,plural,3,present
+224,elles,tombent,tomber,17.97,ɛl,tɔ̃b ,5,2,12,plural,3,present
+225,elles,feront,faire,11.01,ɛl,fə.ʁɔ̃ ,6,3,11,plural,3,future
+226,elles,servent,servir,11.82,ɛl,sɛʁv ,6,2,12,plural,3,present
+227,elles,dorment,dormir,10.27,ɛl,dɔʁm ,6,2,12,plural,3,present
+228,elles,suivent,suivre,12.64,ɛl,sɥiv ,6,2,12,plural,3,present
+229,elles,feraient,faire,13.11,ɛl,fə.ʁɛ ,6,3,13,plural,3,conditional
+230,elles,allèrent,aller,11.69,ɛl.z,a.lɛʁ ,7,3,13,plural,3,past historic
+231,elles,virent,virer,11.62,ɛl,viʁ ,5,2,11,plural,3,present
+232,elles,meurent,mourir,10.47,ɛl,mœʁ ,5,2,12,plural,3,present
+233,elles,laissée,laisser,20.47,ɛl,,6,,12,plural,3,
+234,elles,parlent,parler,29.39,ɛl,paʁl,6,2,12,plural,3,present
+235,elles,tiraient,tirer,10.47,ɛl,ti.ʁɛ ,6,3,13,plural,3,imperfect
+236,elles,firent,faire,37.16,ɛl,fiʁ ,5,2,11,plural,3,past historic
+237,elles,sortent,sortir,17.43,ɛl,sɔʁt ,6,2,12,plural,3,present
+238,elles,arrêtent,arrêter,10.81,ɛl.z,a.ʁɛt,7,3,13,plural,3,present
+239,elles,puissent,pouvoir,14.05,ɛl,pɥis ,6,2,13,plural,3,present subjunctive
+240,elles,forment,former,11.01,ɛl,fɔʁm,6,2,12,plural,3,present

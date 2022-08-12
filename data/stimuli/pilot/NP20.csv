@@ -1,0 +1,121 @@
+ID,Word 1,Word 2,Lemma,Lexical Frequency,Phonemes 1,Phonemes 2,No. phonemes,No. syllables,No. graphemes,Gender,Person,Number (possessor),Number (possessee)
+1,ma,haleine,haleine,21.82,ma,a.lɛn,6,3,9,feminine,1,singular,singular
+2,ma,coutume,coutume,17.03,ma,ku.tym ,7,3,9,feminine,1,singular,singular
+3,ma,version,version,11.01,ma,vɛʁ.sjɔ̃,8,3,9,feminine,1,singular,singular
+4,ma,sirène,sirène,10.34,ma,si.ʁɛn,7,3,8,feminine,1,singular,singular
+5,ma,vedette,vedette,13.92,ma,və.dɛt,7,3,9,feminine,1,singular,singular
+6,ma,poule,poule,16.69,ma,pul ,5,2,7,feminine,1,singular,singular
+7,ma,station,station,17.97,ma,sta.sjɔ̃,8,3,9,feminine,1,singular,singular
+8,ma,fuite,fuite,31.82,ma,fɥit,6,2,7,feminine,1,singular,singular
+9,ma,rivière,rivière,36.49,ma,ʁi.vjɛʁ,8,3,9,feminine,1,singular,singular
+10,ma,cantine,cantine,10.61,ma,kɑ̃.tin,7,3,9,feminine,1,singular,singular
+11,ma,servante,servante,12.3,ma,sɛʁ.vɑ̃t,8,3,10,feminine,1,singular,singular
+12,ma,grotte,grotte,17.84,ma,ɡʁɔt,6,2,8,feminine,1,singular,singular
+13,ma,galerie,galerie,21.22,ma,ɡal.ʁi,8,3,9,feminine,1,singular,singular
+14,ma,grandeur,grandeur,26.49,ma,ɡʁɑ̃.dœʁ,8,3,10,feminine,1,singular,singular
+15,ma,fosse,fosse,10.74,ma,fos,5,2,7,feminine,1,singular,singular
+16,ma,trêve,trêve,11.15,ma,tʁɛv,6,2,7,feminine,1,singular,singular
+17,ma,méthode,méthode,16.42,ma,me.tɔd,7,3,9,feminine,1,singular,singular
+18,ma,fonction,fonction,21.76,ma,fɔ̃k.sjɔ̃,8,3,10,feminine,1,singular,singular
+19,ma,toilette,toilette,32.3,ma,twa.lɛt,8,3,10,feminine,1,singular,singular
+20,ma,rivière,rivière,36.49,ma,ʁi.vjɛʁ,8,3,9,feminine,1,singular,singular
+21,ta,moue,moue,17.43,ta,mu ,4,2,6,feminine,2,singular,singular
+22,ta,source,source,35.41,ta,suʁs,6,2,8,feminine,2,singular,singular
+23,ta,cellule,cellule,35.34,ta,se.lyl,7,3,9,feminine,2,singular,singular
+24,ta,noblesse,noblesse,12.43,ta,nɔ.blɛs ,8,3,10,feminine,2,singular,singular
+25,ta,conquête,conquête,10.88,ta,kɔ̃.kɛt ,7,3,10,feminine,2,singular,singular
+26,ta,buée,buée,13.11,ta,bɥe ,5,2,6,feminine,2,singular,singular
+27,ta,bougie,bougie,16.22,ta,bu.ʒi,6,3,8,feminine,2,singular,singular
+28,ta,lame,lame,25.81,ta,lam ,5,2,6,feminine,2,singular,singular
+29,ta,boutique,boutique,36.01,ta,bu.tik,7,3,10,feminine,2,singular,singular
+30,ta,horreur,horreur,61.35,ta,ɔ.ʁœʁ,6,3,9,feminine,2,singular,singular
+31,ta,croupe,croupe,10.95,ta,kʁup,6,2,8,feminine,2,singular,singular
+32,ta,pelouse,pelouse,12.97,ta,pə.luz,7,3,9,feminine,2,singular,singular
+33,ta,lenteur,lenteur,21.96,ta,lɑ̃.tœʁ,7,3,9,feminine,2,singular,singular
+34,ta,colère,colère,92.77,ta,kɔ.lɛʁ,7,3,8,feminine,2,singular,singular
+35,ta,panne,panne,10.81,ta,pan ,5,2,7,feminine,2,singular,singular
+36,ta,tension,tension,14.93,ta,tɑ̃.sjɔ̃,7,3,9,feminine,2,singular,singular
+37,ta,humeur,humeur,52.57,ta,y.mœʁ ,6,3,8,feminine,2,singular,singular
+38,ta,moquette,moquette,14.73,ta,mɔ.kɛt ,7,3,10,feminine,2,singular,singular
+39,ta,fourrure,fourrure,16.89,ta,fu.ʁyʁ,7,3,10,feminine,2,singular,singular
+40,ta,chanson,chanson,26.15,ta,ʃɑ̃.sɔ̃,6,3,9,feminine,2,singular,singular
+41,sa,cage,cage,34.86,sa,kaʒ,5,2,6,feminine,3,singular,singular
+42,sa,fente,fente,10.54,sa,fɑ̃t,5,2,7,feminine,3,singular,singular
+43,sa,crise,crise,37.97,sa,kʁiz,6,2,7,feminine,3,singular,singular
+44,sa,poire,poire,10.81,sa,pwaʁ,6,2,7,feminine,3,singular,singular
+45,sa,flèche,flèche,15.54,sa,flɛʃ,6,2,8,feminine,3,singular,singular
+46,sa,tribu,tribu,13.58,sa,tʁi.by ,7,3,7,feminine,3,singular,singular
+47,sa,légion,légion,13.65,sa,le.ʒjɔ̃ ,7,3,8,feminine,3,singular,singular
+48,sa,façade,façade,29.66,sa,fa.sad,7,3,8,feminine,3,singular,singular
+49,sa,vigueur,vigueur,15.54,sa,vi.ɡœʁ,7,3,9,feminine,3,singular,singular
+50,sa,tendance,tendance,14.26,sa,tɑ̃.dɑ̃s ,7,3,10,feminine,3,singular,singular
+51,sa,caserne,caserne,12.03,sa,ka.zɛʁn,8,3,9,feminine,3,singular,singular
+52,sa,coiffure,coiffure,14.05,sa,kwa.fyʁ ,8,3,10,feminine,3,singular,singular
+53,sa,province,province,24.73,sa,pʁɔ.vɛ̃s ,8,3,10,feminine,3,singular,singular
+54,sa,pénombre,pénombre,28.04,sa,pe.nɔ̃bʁ ,8,3,10,feminine,3,singular,singular
+55,sa,modestie,modestie,10.27,sa,mɔ.dɛs.ti,9,4,10,feminine,3,singular,singular
+56,sa,division,division,29.73,sa,di.vi.zjɔ̃,9,4,10,feminine,3,singular,singular
+57,sa,réponse,réponse,83.72,sa,ʁe.pɔ̃s,7,3,9,feminine,3,singular,singular
+58,sa,chaleur,chaleur,112.23,sa,ʃa.lœʁ ,7,3,9,feminine,3,singular,singular
+59,sa,plage,plage,72.03,sa,plaʒ ,6,2,7,feminine,3,singular,singular
+60,sa,santé,santé,52.43,sa,sɑ̃.te ,6,3,7,feminine,3,singular,singular
+61,son,âne,âne,14.32,sɔ̃,ɑn,4,2,6,masculine,3,singular,singular
+62,son,lot,lot,15.68,sɔ̃,lo,4,2,6,masculine,3,singular,singular
+63,son,chou,chou,13.99,sɔ̃,ʃu,4,2,7,masculine,3,singular,singular
+64,son,four,four,25.07,sɔ̃,fuʁ,5,2,7,masculine,3,singular,singular
+65,son,savon,savon,16.55,sɔ̃,sa.vɔ̃,6,3,8,masculine,3,singular,singular
+66,son,membre,membre,15.2,sɔ̃,mɑ̃bʁ,6,2,9,masculine,3,singular,singular
+67,son,ballon,ballon,17.16,sɔ̃,ba.lɔ̃,6,3,9,masculine,3,singular,singular
+68,son,hangar,hangar,12.97,sɔ̃,ɑ̃.ɡaʁ,6,3,9,masculine,3,singular,singular
+69,son,accueil,accueil,16.22,sɔ̃,a.kœj,6,3,10,masculine,3,singular,singular
+70,son,taureau,taureau,10,sɔ̃,tɔ.ʁo,6,3,10,masculine,3,singular,singular
+71,son,serpent,serpent,13.24,sɔ̃,sɛʁ.pɑ̃,7,3,10,masculine,3,singular,singular
+72,son,meurtre,meurtre,12.3,sɔ̃,mœʁtʁ,7,2,10,masculine,3,singular,singular
+73,son,champion,champion,10.81,sɔ̃,ʃɑ̃.pjɔ̃,7,3,11,masculine,3,singular,singular
+74,son,relief,relief,13.51,sɔ̃,ʁə.ljɛf,8,3,9,masculine,3,singular,singular
+75,son,patron,patron,93.85,sɔ̃,pa.tʁɔ̃,7,3,9,masculine,3,singular,singular
+76,son,manteau,manteau,58.99,sɔ̃,mɑ̃.to,6,3,10,masculine,3,singular,singular
+77,son,dessin,dessin,34.86,sɔ̃,de.sɛ̃,6,3,9,masculine,3,singular,singular
+78,son,prêtre,prêtre,29.39,sɔ̃,pʁɛtʁ,7,2,9,masculine,3,singular,singular
+79,son,hall,hall,25.81,sɔ̃,ol,4,2,7,masculine,3,singular,singular
+80,son,carnet,carnet,24.66,sɔ̃,kaʁ.nɛ,7,3,9,masculine,3,singular,singular
+81,votre,audace,audace,16.55,vɔtʁ,o.das,8,3,11,feminine,2,plural,singular
+82,votre,fouet,fouet,16.69,vɔtʁ,fwɛ,7,2,10,masculine,2,plural,singular
+83,votre,foudre,foudre,12.64,vɔtʁ,fudʁ,8,2,11,masculine,2,plural,singular
+84,votre,ordure,ordure,10.41,vɔtʁ,ɔʁ.dyʁ,9,3,11,feminine,2,plural,singular
+85,votre,litre,litre,10.2,vɔtʁ,litʁ,8,2,10,masculine,2,plural,singular
+86,votre,peintre,peintre,31.22,vɔtʁ,pɛ̃tʁ,8,2,12,masculine,2,plural,singular
+87,votre,poème,poème,15.95,vɔtʁ,pɔ.ɛm,8,3,10,masculine,2,plural,singular
+88,votre,usure,usure,10,vɔtʁ,y.zyʁ,8,3,10,feminine,2,plural,singular
+89,votre,diamant,diamant,14.12,vɔtʁ,dja.mɑ̃,9,3,12,masculine,2,plural,singular
+90,votre,concert,concert,24.86,vɔtʁ,kɔ̃.sɛʁ,9,3,12,masculine,2,plural,singular
+91,votre,collègue,collègue,12.16,vɔtʁ,kɔ.lɛɡ,9,3,13,masculine,2,plural,singular
+92,votre,tumulte,tumulte,12.09,vɔtʁ,ty.mylt,10,3,12,masculine,2,plural,singular
+93,votre,gravier,gravier,11.35,vɔtʁ,ɡʁa.vje,10,3,12,masculine,2,plural,singular
+94,votre,virginie,virginie,31.28,vɔtʁ,viʁ.ʒi.ni,11,4,13,feminine,2,plural,singular
+95,votre,ampoule,ampoule,11.49,vɔtʁ,ɑ̃.pul,8,3,12,feminine,2,plural,singular
+96,votre,cendrier,cendrier,10.95,vɔtʁ,sɑ̃.dʁi.je,11,4,13,masculine,2,plural,singular
+97,votre,usage,usage,42.3,vɔtʁ,y.zaʒ,8,3,10,masculine,2,plural,singular
+98,votre,alliance,alliance,20.81,vɔtʁ,a.ljɑ̃s,9,3,13,feminine,2,plural,singular
+99,votre,berceau,berceau,12.43,vɔtʁ,bɛʁ.so,9,3,12,masculine,2,plural,singular
+100,votre,ardeur,ardeur,23.24,vɔtʁ,aʁ.dœʁ,9,3,11,feminine,2,plural,singular
+101,leurs,chants,chant,13.65,lœʁ,ʃɑ̃,5,2,11,masculine,3,plural,plural
+102,leurs,soeurs,soeur,44.46,lœʁ,sœʁ,6,2,11,feminine,3,plural,plural
+103,leurs,scènes,scène,19.66,lœʁ,sɛn,6,2,11,feminine,3,plural,plural
+104,leurs,caisses,caisse,18.38,lœʁ,kɛs,6,2,12,feminine,3,plural,plural
+105,leurs,pluies,pluie,10.81,lœʁ,plɥi,7,2,11,feminine,3,plural,plural
+106,leurs,injures,injure,11.76,lœʁ.z,ɛ̃.ʒyʁ,8,3,12,feminine,3,plural,plural
+107,leurs,poutres,poutre,10.41,lœʁ,putʁ,7,2,12,feminine,3,plural,plural
+108,leurs,miettes,miette,13.04,lœʁ,mjɛt,7,2,12,feminine,3,plural,plural
+109,leurs,bouquins,bouquin,13.24,lœʁ,bu.kɛ̃,7,2,13,masculine,3,plural,plural
+110,leurs,hauteurs,hauteur,11.55,lœʁ,o.tœʁ,7,2,13,feminine,3,plural,plural
+111,leurs,grains,grain,11.69,lœʁ,ɡʁɛ̃,6,2,11,masculine,3,plural,plural
+112,leurs,touffes,touffe,10,lœʁ,tuf,6,2,12,masculine,3,plural,plural
+113,leurs,cousins,cousin,20.61,lœʁ,ku.zɛ̃,7,3,12,masculine,3,plural,plural
+114,leurs,courses,course,30,lœʁ,kuʁs,7,2,12,feminine,3,plural,plural
+115,leurs,mouettes,mouette,10.34,lœʁ,mwɛt ,7,2,13,feminine,3,plural,plural
+116,leurs,routes,route,36.69,lœʁ,ʁut ,6,2,11,feminine,3,plural,plural
+117,leurs,cendres,cendre,17.77,lœʁ,sɑ̃dʁ,7,2,12,feminine,3,plural,plural
+118,leurs,châteaux,château,10.74,lœʁ,ʃɑ.to ,7,3,13,masculine,3,plural,plural
+119,leurs,peintres,peintre,13.85,lœʁ,pɛ̃tʁ ,7,2,13,masculine,3,plural,plural
+120,leurs,ciseaux,ciseau,11.01,lœʁ,si.zo ,7,3,12,masculine,3,plural,plural
