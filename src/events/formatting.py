@@ -278,8 +278,13 @@ def _modify_df(df: pd.DataFrame, word_list, stimuli_text, rejected_list):
     return df
 
 
-def _find_sentence(word_list, stimuli_text):
-    # todo comment
+def _find_sentence(word_list, stimuli_text) -> None:
+    """
+    Find sentence from word list and return the sentence ID
+    :param word_list: list of words that should form a sentence
+    :param stimuli_text: content of the `stimuli.txt` file
+    :return:
+    """
 
     stimuli_list = stimuli_text.splitlines()
     for stimulus in stimuli_list:
