@@ -39,9 +39,39 @@ id_to_name = {1: "word",
 ########################################################################################################################
 
 
-def assign_ids(text: str):
+def format_event_data(events_path, stimuli_path) -> [pd.DataFrame, list]:
     """
-    From stimuli.txt content construct two dictionaries by assigning and ID to every token in the text.
+    Clean up events data by removing the unnecessary components and reformatting the data
+    :param events_path: path to the CSV file provided by the original dataset
+    :param stimuli_path: path to the stimuli.txt file
+    :return:
+        events_df: pd.DataFrame, cleaned dataframe object with following columns
+            `sample`: sampling index, int
+            `type`: either `word`, `block` or `empty`. Only `word` matters to this project
+            `onset`: onset time in seconds
+            `form`: actual word form presented, e.g. `zijn`
+            `sentence`: sentence ID assigned to the stimulus
+            `position`: position of the word within the sentence
+            `ID`: word ID
+        rejected_list: list of events rejected due to bad formats
+    """
+
+    events_df = pd.read_csv(events_path, sep="\t")
+    with open(stimuli_path, "r") as f:
+        stimuli_text = f.read()
+
+    _, position_to_id = _assign_ids(stimuli_text)
+
+    events_df = _clean_df(events_df)
+    events_df, rejected_list = _add_sentence_column(events_df, stimuli_text)
+    events_df.dropna(axis=0, inplace=True)
+    events_df = _add_ids(events_df, position_to_id)
+    return events_df, rejected_list
+
+
+def _assign_ids(text: str):
+    """
+    From stimuli.txt content construct two dictionaries by assigning and ID to every token in the text
     :param text: text file of stimuli.txt. Contains list of stimuli in the format: [stimulus no.] [sentence/list]\n
     :return:
         id_to_word: dictionary, key = token ID, value = token string
@@ -66,32 +96,9 @@ def assign_ids(text: str):
     return id_to_word, position_to_id
 
 
-def format_event_data(events_path, stimuli_path) -> [pd.DataFrame, list]:
-    """
-    Clean up events data by removing the unnecessary components and reformatting the data.
-    :param events_path: path to the CSV file provided by the original dataset
-    :param stimuli_path: path to the stimuli.txt file
-    :return:
-        events_df: pd.DataFrame, cleaned dataframe object
-        rejected_list: list of events rejected due to bad formats
-    """
-
-    events_df = pd.read_csv(events_path, sep="\t")
-    with open(stimuli_path, "r") as f:
-        stimuli_text = f.read()
-
-    _, position_to_id = assign_ids(stimuli_text)
-
-    events_df = _clean_df(events_df)
-    events_df, rejected_list = _add_sentence_column(events_df, stimuli_text)
-    events_df.dropna(axis=0, inplace=True)
-    events_df = _add_ids(events_df, position_to_id)
-    return events_df, rejected_list
-
-
 def _clean_df(df):
     """
-    Select relevant information and discard the rest.
+    Select relevant information and discard the rest
     :param df: original dataframe
     :return: cleaned dataframe with `sample`, `type`, `onset` and `form` column
     """
@@ -419,3 +426,13 @@ def select_conditions(events: np.array, mode="both") -> np.array:
     elif mode == "list":
         events = events[np.where(events[:2] >= 4598)]
     return events
+
+
+if __name__ == "__main__":
+    stimuli = Path("/Users/hiro/Downloads/stimuli.txt")
+    events = Path("/Users/hiro/Downloads/sub-V1010_task-visual_events - sub-V1010_task-visual_events.tsv")
+
+    df, rejects = format_event_data(events_path=events, stimuli_path=stimuli)
+    print(df)
+    print(set(df["type"]))
+    pass
