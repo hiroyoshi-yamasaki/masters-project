@@ -308,14 +308,21 @@ def _find_sentence(word_list, stimuli_text) -> Union[None, int]:
     return None
 
 
-def _add_ids(df: pd.DataFrame, position_to_id: dict):
-    # todo comment
+def _add_ids(df: pd.DataFrame, position_to_id: dict) -> pd.DataFrame:
+    """
+    Add word IDs  to the dataframe
+    :param df: clean dataframe
+    :param position_to_id: dictionary of dictionary {sentence ID: {position: word ID}
+    :return: clean dataframe
+    """
 
     df["ID"] = ""
 
     for idx, row in df.iterrows():
+
         sentence_number = row["sentence"]
         position = row["position"]
+
         if sentence_number is not None and position != "":  # missing sentence or position
             if sentence_number in position_to_id:
                 if position in position_to_id[sentence_number]:
