@@ -1,6 +1,7 @@
 import logging
 from math import isnan
 from pathlib import Path
+from typing import List
 import re
 import numpy as np
 import pandas as pd
@@ -215,12 +216,15 @@ def _match_event(events, sample_list, type_list, onset_list, form_list):
         form_list.append(form)
 
 
-def _add_sentence_column(df: pd.DataFrame, stimuli_text: str):
+def _add_sentence_column(df: pd.DataFrame, stimuli_text: str) -> List[pd.DataFrame, list]:
     """
-    todo comment
-    :param df:
-    :param stimuli_text:
+    Add new columns `sentence` and `position` to the clean dataframe. `sentence` corresponds to the unique sentence ID
+    and `position` corresponds to the position of the word within tht sentence
+    :param df: clean dataframe with additional columns `sentence` and `position`
+    :param stimuli_text: content of the `stimuli.txt` file
     :return:
+        df: clean dataframe
+        rejected_list: list of sentences that failed to match correctly
     """
 
     df["sentence"] = ""
