@@ -233,6 +233,7 @@ def _add_sentence_column(df: pd.DataFrame, stimuli_text: str) -> List[Union[pd.D
     word_list = None
     rejected_list = []
 
+    # Group rows by sentence and add to word_list
     for idx, row in df.iterrows():
 
         if row["type"] == "fixation":  # new sentence is preceded by "fixation"
@@ -250,14 +251,15 @@ def _add_sentence_column(df: pd.DataFrame, stimuli_text: str) -> List[Union[pd.D
 
 def _modify_df(df: pd.DataFrame, word_list, stimuli_text, rejected_list):
     """
-
+    Once all the words in a sentence is found, match this to the sentence in the all the possible sentences
+    and add values to `sentence` and `position` column
     :param df: clean dataframe
-    :param word_list:
-    :param stimuli_text:
-    :param rejected_list:
+    :param word_list: list of words grouped into a sentence
+    :param stimuli_text: content of the `stimuli.txt` file
+    :param rejected_list: list of events rejected. Append to this list if matching fails
     :return:
+        df: modified clean dataframe
     """
-    # todo comment
 
     if word_list is not None:
 
