@@ -98,20 +98,31 @@ def _assign_ids(text: str):
 
 def _clean_df(df):
     """
-    Select relevant information and discard the rest
-    :param df: original dataframe
-    :return: cleaned dataframe with `sample`, `type`, `onset` and `form` column
+    Select relevant information and discard the rest. There are unnecessary events such as `frontpanel trigger` or
+    `trial` all summarised in the column `type`. Moreover, there are multiple rows corresponding to a single event.
+        E.g. sample=3319 has row with value=frontpanel trigger, value=UPPT001, value=Picture
+    To solve this, group events with same sampling index and assign single type while discarding unnecessary info
+    :param df: original dataframe with columns:
+        `onset`: onset time in seconds
+        `duration`: discarded
+        `sample`: sampling index
+        `type`: original type description. To be edited later
+        `value`: original value of the event. To be edited later
+    :return: cleaned dataframe with columns:
+        `sample`: sampling index
+        `type`: simplified `type` with values
+            `fixation`, `response/1`, `response/2`, `response/3`, `block`, `question`, `word`, `empty`, `block`
+        `onset`: onset time in seconds
+        `form`: word form
     """
 
-    sample_list = []
-    type_list = []
-    onset_list = []
-    form_list = []
+    sample_list, type_list, onset_list, form_list = [], [], [], []
 
     curr_sample = 1
     curr_event = []
     for idx, row in df.iterrows():
 
+        # Group events with the same sampling index
         if row["sample"] in [curr_sample, curr_sample + 1]:  # sample value can vary by max. 1 sample
             curr_event.append(row)
 
@@ -120,18 +131,14 @@ def _clean_df(df):
             curr_sample = row["sample"]
             curr_event = [row]
 
-    df = pd.DataFrame()
-    df["sample"] = sample_list
-    df["type"] = type_list
-    df["onset"] = onset_list
-    df["form"] = form_list
+    df = pd.DataFrame({"sample": sample_list, "type": type_list, "onset": onset_list, "form": form_list})
     return df
 
 
 def _match_event(events, sample_list, type_list, onset_list, form_list):
     """
     Match relevant information and append to list
-    :param events: list of rows in the event
+    :param events: list of rows in the event (Series)
     :param sample_list: list of sample values
     :param type_list: list of type values
     :param onset_list: list of onset values
@@ -434,5 +441,4 @@ if __name__ == "__main__":
 
     df, rejects = format_event_data(events_path=events, stimuli_path=stimuli)
     print(df)
-    print(set(df["type"]))
     pass
