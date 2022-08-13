@@ -68,7 +68,7 @@ def load_json(json_path: Path):
 
 def read_json(dir_path: Path, file_name: str):
     """
-    A legacy method for reading JSON. Takes path to the parent directory and file.
+    A legacy method for reading JSON. Takes path to the parent directory and file
     :param dir_path: Path to the directory containing the JSON file
     :param file_name: name of the JSON file
     :return: content of the JSON file in dictionary format
@@ -84,7 +84,7 @@ def read_json(dir_path: Path, file_name: str):
 
 def write_json(dir_path: Path, file_name: str, data):
     """
-    Write the python dictionary content to a JSON fiůe
+    Write the python dictionary content to a JSON file
     :param dir_path: Path to the directory in which to save the file
     :param file_name: Name of the JSON file
     :param data: data to save
@@ -294,5 +294,3 @@ def read_data(data_dir: Path):
             return x
         else:
             raise FileNotFoundError(f"Neither JSON file nor 'x.npy' file was found in {data_dir}")
-
-
