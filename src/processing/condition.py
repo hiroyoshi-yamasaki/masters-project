@@ -136,7 +136,7 @@ def _to_arrays(y: np.array, id_to_cond: dict):
 
 def _balance_classes(y: np.array):
     """
-    Balance the number of items per class by dropping randomly.
+    Balance the number of items per class by dropping randomly
     :param y: array to be modified, (2, n_events)
     :return:
         y: modified y
@@ -183,7 +183,7 @@ def _to_nv(df_dir: Path, to_index: bool, params: dict):
         allow_ambiguous_gender: if true, include ambiguous gender e.g. m./f.
         allow_common_gender: if true, include common gender nouns
         allow_diminutives: if true, include diminutive words
-        allow_uncountables: if true, include uncountalbe nouns
+        allow_unaccountable: if true, include uncountable nouns
         allow_proper: if true, include proper nouns
     :return:
         dictionary
@@ -271,14 +271,14 @@ def _select_verbs(verbs: pd.DataFrame, number=None, tense=None, person=None, voi
 
 
 def _select_nouns(nouns: pd.DataFrame, allow_ambiguous_gender=False, allow_common_gender=False,
-                  allow_diminutives=False, allow_uncountables=False, allow_proper=False):
+                  allow_diminutives=False, allow_uncountable=False, allow_proper=False):
     """
     Select appropriate nouns
     :param nouns: dataframe with relevant information
     :param allow_ambiguous_gender: if true, include ambiguous gender e.g. m./f.
     :param allow_common_gender: if true, include common gender nouns
     :param allow_diminutives: if true, include diminutive words
-    :param allow_uncountables: if true, include uncountalbe nouns
+    :param allow_uncountable: if true, include uncountable nouns
     :param allow_proper: if true, include proper nouns
     :return:
         dictionary
@@ -297,7 +297,7 @@ def _select_nouns(nouns: pd.DataFrame, allow_ambiguous_gender=False, allow_commo
         nouns = nouns[nouns["Diminutive"] is False]
 
     # Filter uncountable
-    if not allow_uncountables:
+    if not allow_uncountable:
         nouns = nouns[nouns["Number"] != "uncount."]
 
     # Filter proper nouns
