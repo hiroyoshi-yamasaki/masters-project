@@ -24,7 +24,7 @@ logger.setLevel(logging.INFO)
 def remove_artifacts(raw: Raw, n_components: float, eog_channels=None, ecg_channel=None,
                      save_ica=True, apply=False, dst_dir=None, n_jobs=1) -> Raw:
     """
-    Perform artifact removal using ICA.
+    Perform artifact removal using ICA
     :param raw: mne raw object
     :param n_components: number of components to use for ICA
     :param eog_channels: list of channel names to be used as EOG channels
