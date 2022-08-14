@@ -17,8 +17,14 @@ what is known as *Episodic Memory Network* which is thought to process episodic 
 
 
 
+## Spatio-temporal pattern of significant decoding
+![image info](./results/figures/whole-brain.png)
 
+## Regions of Interest (ROI)
+![image info](./results/figures/rois.png)
 
+## Decoding performances in ROIs
+![image info](./results/figures/rois.png)
 
 ## Top level workflow
 * Preprocessing (per subject)
