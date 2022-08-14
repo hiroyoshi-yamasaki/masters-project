@@ -24,7 +24,7 @@ what is known as *Episodic Memory Network* which is thought to process episodic 
 ![image info](./results/figures/rois.png)
 
 ## Decoding performances in ROIs
-![image info](./results/figures/rois.png)
+![image info](./results/figures/whole-brain.png)
 
 ## Top level workflow
 * Preprocessing (per subject)
