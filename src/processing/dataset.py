@@ -50,7 +50,7 @@ def _get_events_paths(epoch_dir: Path, reject_list: List[str]):
 
 def _get_stc_paths(epoch_dir: Path, area_name: str, reject_list: List[str]):
     """
-    ollect list of available source localizations
+    Collect list of available source localizations
     :param epoch_dir: directory containing all epochs
     :param area_name: name of the area
     :param reject_list: todo reject_list
@@ -85,7 +85,7 @@ def _get_stc_paths(epoch_dir: Path, area_name: str, reject_list: List[str]):
 
 def _validate_paths(stc_paths: list, events_paths: list):
     """
-    Validate the paths by making sure they are of the same subjectt
+    Validate the paths by making sure they are of the same subject
     :param stc_paths: list of paths to stc data
     :param events_paths: list of paths to events array
     :return: validated lists of paths
@@ -226,6 +226,7 @@ def _generate_data(dst_dir: Path, data_paths: list, event_paths: list):
 def generate_dataset(epoch_dir: Path, dst_dir: Path, area_name: str, max_subjects=-1,
                      memmap=True, reject=None) -> None:
     """
+    todo comment
     :param epoch_dir: directory in which stc and epochs are stored
     :param dst_dir: directory in which to save the results
     :param area_name: name of the cortical area
@@ -259,4 +260,3 @@ def generate_dataset(epoch_dir: Path, dst_dir: Path, area_name: str, max_subject
     else:
         _generate_data(dst_dir, stc_paths, events_paths)
     logger.info("Process terminated")
-
