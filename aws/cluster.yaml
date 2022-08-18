@@ -1,0 +1,32 @@
+[aws]
+aws_region_name = eu-west-2
+
+[aliases]
+ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
+
+[global]
+cluster_template = default
+update_check = true
+sanity_check = true
+
+[cluster default]
+key_name = test-sever-keypair
+scheduler = slurm
+master_instance_type = t2.micro
+base_os = alinux2
+vpc_settings = default
+queue_settings = compute
+
+[vpc default]
+vpc_id = vpc-0664f314c1f57a309
+master_subnet_id = subnet-03ff0dbda4837235b
+compute_subnet_id = subnet-06239973592543c65
+use_public_ips = false
+
+[queue compute]
+enable_efa = false
+compute_resource_settings = default
+
+[compute_resource default]
+instance_type = t2.micro
+
