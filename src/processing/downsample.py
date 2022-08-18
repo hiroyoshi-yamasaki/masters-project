@@ -27,12 +27,13 @@ logger.setLevel(logging.INFO)
 ########################################################################################################################
 
 
-def downsample(raw: Raw, sfreq: int, n_jobs) -> Tuple[Raw, np.array, np.array]:
+def downsample(raw: Raw, sfreq: int, n_jobs, mous=True) -> Tuple[Raw, np.array, np.array]:
     """
     Downsample to some lower sampling frequency
     :param raw: raw object
     :param sfreq: sampling frequency
     :param n_jobs: number of jobs for parallelism
+    :param mous: if true, use 'UPPT001' and 'UPPT002' as channels
     :return:
         raw: resampled raw object
         events: original events (needed for validating events)
@@ -43,7 +44,10 @@ def downsample(raw: Raw, sfreq: int, n_jobs) -> Tuple[Raw, np.array, np.array]:
 
     # Find events (needed whether it is downsampled or not)
     try:
-        events = find_events(raw, stim_channel=["UPPT001", "UPPT002"], min_duration=2 / raw.info["sfreq"])
+        if mous:
+            events = find_events(raw, stim_channel=["UPPT001", "UPPT002"], min_duration=2 / raw.info["sfreq"])
+        else:
+            events = find_events(raw)
     except ValueError as e:
         logger.exception(f"Issue with shortest event. Needs manual inspection {e}")
         raise SubjectNotProcessedError(e)
@@ -74,6 +78,7 @@ def get_args():
     parser.add_argument("--n_jobs", type=int, required=False, default=1, help="Number of jobs to use. Default is 1.")
     parser.add_argument("--dst_dir", type=str, required=False, help="Directory to save the results in")
     parser.add_argument("--name", type=str, required=False, default="", help="File name. Default is empty.")
+    parser.add_argument("--mous", type=bool, required=False, default=True, help="If true, use UPPT001/002")
 
     args = parser.parse_args()
 
@@ -81,10 +86,10 @@ def get_args():
     if args.json_path:
         params = load_json(args.json_path)
         raw_path, format, sfreq = params["raw-path"], params["format"], params["sfreq"]
-        n_jobs, dst_dir, name = params["n-jobs"], params["dst-dir"], params["name"]
+        n_jobs, dst_dir, name, mous = params["n-jobs"], params["dst-dir"], params["name"], params["mous"]
     else:
-        raw_path, format, sfreq, n_jobs, dst_dir, name = \
-            args.raw_path, args.format, args.sfreq, args.n_jobs, args.dst_dir, args.name
+        raw_path, format, sfreq, n_jobs, dst_dir, name, mous = \
+            args.raw_path, args.format, args.sfreq, args.n_jobs, args.dst_dir, args.name, args.mous
 
     # Convert to path object
     raw_path = Path(raw_path)
@@ -94,22 +99,24 @@ def get_args():
     if not dst_dir.exists():
         os.makedirs(dst_dir)
 
-    return raw_path, format, sfreq, n_jobs, dst_dir, name
+    return raw_path, format, sfreq, n_jobs, dst_dir, name, mous
 
 
 if __name__ == "__main__":
 
     try:
         # Read parameters
-        raw_path, format, sfreq, n_jobs, dst_dir, name = get_args()
+        raw_path, format, sfreq, n_jobs, dst_dir, name, mous = get_args()
 
         # Read raw
         raw = read_raw_format(raw_path, format)
 
         # Downsample
-        raw, events, new_events = downsample(raw=raw, sfreq=sfreq, n_jobs=n_jobs)
+        raw, events, new_events = downsample(raw=raw, sfreq=sfreq, n_jobs=n_jobs, mous=mous)
 
         # Save to file
+        if not dst_dir.exists():
+            os.makedirs(dst_dir)
         raw.save(str(dst_dir / f"{name}-downsampled-{sfreq}Hz-raw.fif"), overwrite=True)
         np.save(str(dst_dir / f"{name}-downsampled-{sfreq}Hz-original-events.npy"), events)
         np.save(str(dst_dir / f"{name}-downsampled-{sfreq}Hz-new-events.npy"), new_events)
