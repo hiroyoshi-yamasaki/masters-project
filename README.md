@@ -16,7 +16,6 @@ The results show that **we can indeed 'read minds'**. In particular, we observe 
 what is known as *Episodic Memory Network* which is thought to process episodic memories.
 
 
-
 ## Spatio-temporal pattern of significant decoding
 <img src="./results/figures/whole-brain.png" alt="pattern" width="600"/>
 
@@ -25,6 +24,30 @@ what is known as *Episodic Memory Network* which is thought to process episodic 
 
 ## Decoding performances in ROIs
 <img src="./results/figures/multiple.png" alt="multiple" width="600"/>
+
+# Processing workflow
+## Preprocessing specific to pilot data
+Pilot data is in BTI format and EEG data (including stimuli triggers) are
+recorded separately. Thus, they must be combined into a single FIF file.
+
+The original file structure:
+```commandline
+meg-data
+    config
+    data
+    hs_file
+eeg-data
+    t_FVI_01_0001.eeg
+    t_FVI_01_0001.vhdr
+    t_FVI_01_0001.vhdr.display
+    t_FVI_01_0001.vhdr.flt
+    t_FVI_01_0001.vhdr.levels
+    t_FVI_01_0001.vhdr.mtg
+    t_FVI_01_0001.vmrk
+```
+
+Use `preprocess_pilot.py` script to convert it into FIF format.
+
 
 ## Top level workflow
 * Preprocessing (per subject)
