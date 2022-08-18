@@ -3,12 +3,15 @@
 ## Configure the cluster
 The cluster name is *masters-cluster*
 
-    pcluster create-cluster --cluster-name <CLUSTER-NAME> \
-        --cluster-configuration <CLUSTER-NAME>.yaml
+```commandline
+pcluster create-cluster --cluster-name CLUSTER-NAME --cluster-configuration CLUSTER-NAME.yaml
+```
 
 ## Logging in
 
-    pcluster ssh --cluster-name <CLUSTER-NAME> -i <PATH/TO/KEY>.pem
+```commandline
+pcluster ssh --cluster-name CLUSTER-NAME -i PATH/TO/KEY.pem
+```
 
 
 
