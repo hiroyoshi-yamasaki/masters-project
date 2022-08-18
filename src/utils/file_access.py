@@ -237,7 +237,7 @@ def read_labels(parc, subject, hemi, subjects_dir):
 
     labels = read_labels_from_annot("fsaverage", parc=parc, hemi=hemi, subjects_dir=subjects_dir)
 
-    if subject is not "fsaverage":
+    if subject != "fsaverage":
         labels = morph_labels(labels, subject_to=subject, subject_from="fsaverage",
                               subjects_dir=subjects_dir, surf_name="white")
     return labels
@@ -294,3 +294,24 @@ def read_data(data_dir: Path):
             return x
         else:
             raise FileNotFoundError(f"Neither JSON file nor 'x.npy' file was found in {data_dir}")
+
+
+def convert_bti_to_fif(meg_dir: Path, dst: Path) -> None:
+    """
+    Convert BTI format into FIF format
+    :param meg_dir: path to MEG directory containing main file, config file and header
+    :param dst: path to save data
+    """
+
+    # Get raw MEG data
+
+    raw = mne.io.read_raw_bti(pdf_fname=str(meg_dir / "c,rfDC"),
+                              config_fname=str(meg_dir / "config"),
+                              head_shape_fname=str(meg_dir / "hs_file"),
+                              preload=True)
+
+    # Drop incorrect EEG lines
+    raw.drop_channels(["VEOG", "HEOG", "OO", "EEG 001"])
+
+    # Save
+    raw.save(str(dst))
