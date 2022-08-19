@@ -67,7 +67,7 @@ def get_args():
     # Either from JSON or one by one
     if args.json_path:
 
-        params = load_json(args.json_path)
+        params = load_json(Path(args.json_path))
 
         raw_path, format, l_freq, h_freq = params["raw-path"], params["format"], params["l-freq"], params["h-freq"]
         notch, dst_dir, name, n_jobs = params["notch"], params["dst-dir"], params["name"], params["n-jobs"]
@@ -93,7 +93,7 @@ if __name__ == "__main__":
         raw_path, format, l_freq, h_freq, notch, dst_dir, name, n_jobs = get_args()
 
         # Read raw
-        raw = read_raw_format(path=raw_path, format=format).load_data()
+        raw = read_raw_format(path=raw_path, file_format=format).load_data()
 
         # Filter
         raw = apply_filter(raw=raw, l_freq=l_freq, h_freq=h_freq, notch=notch, n_jobs=n_jobs)
