@@ -1,4 +1,5 @@
 import argparse
+import os
 from pathlib import Path
 import mne
 
@@ -28,6 +29,8 @@ def get_raw(fname: Path, config: Path, head: Path, eeg_header: Path, l_freq: flo
     # Add EEG to MEG
     raw.add_channels([eeg_raw], force_update_info=True)
 
+    if not dst_dir.exists():
+        os.makedirs(dst_dir)
     raw.save(str(dst_dir / "raw.fif"))
 
 
