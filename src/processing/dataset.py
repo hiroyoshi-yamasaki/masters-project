@@ -8,7 +8,7 @@ import numpy as np
 from src.utils.file_access import write_json
 from src.utils.logger import get_logger
 
-logger = get_logger(file_name="artifact")
+logger = get_logger(file_name="dataset")
 logger.setLevel(logging.INFO)
 
 # todo big comment at the top
