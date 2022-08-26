@@ -1,6 +1,10 @@
+import argparse
+import os
 from pathlib import Path
 from mne.coreg import Coregistration
-from mne import Info, setup_source_space, make_bem_model, make_bem_solution, make_forward_solution, Transform, Forward
+from mne import Info, Transform, write_trans
+from mne.io import read_info
+from src.utils.file_access import load_json
 
 ########################################################################################################################
 # COREGISTRATION                                                                                                       #
@@ -27,30 +31,30 @@ def get_trans(subject: str, subjects_dir: Path, info: Info) -> Transform:
     return coreg.trans
 
 
-def get_forward(info: Info, trans: str, subject: str, subjects_dir: Path, layers: int) -> Forward:
-    """
-    Get forward model specific for the subject. https://mne.tools/stable/auto_tutorials/forward/30_forward.html
-    :param info: Info object about the data
-    :param trans: Transform for the measurement
-    :param subject: subject name
-    :param subjects_dir: path to freesurfer directory
-    :param layers: whether to use 1 or 3 layers
-    :return:
-    """
+def get_args():
 
-    src = setup_source_space(subject, spacing="ico5", add_dist="patch", subjects_dir=subjects_dir)
+    # Parse arguments
+    parser = argparse.ArgumentParser(description="Create trans automatically for the subject")
+    parser.add_argument("--json_path", type=str, required=False, help="Path to JSON containing parameters")
+    args = parser.parse_args()
+    params = load_json(Path(args.json_path))
 
-    if layers == 3:
-        conductivity = (0.3, 0.006, 0.3)    # for three layers
-    elif layers == 1:
-        conductivity = (0.3,)  # for single layer
-    else:
-        raise ValueError(f"Invalid layer number \"{layers}\" was given")
+    subject, subjects_dir, info_path, dst_dir = params["subject"], params["subjects-dir"], params["info-path"], \
+                                                params["dst-dir"]
 
-    model = make_bem_model(subject=subject, ico=5, conductivity=conductivity, subjects_dir=subjects_dir)
-    bem = make_bem_solution(model)
+    # Convert to path objects
+    subjects_dir = Path(subjects_dir)
+    dst_dir = Path(dst_dir)
 
-    fwd = make_forward_solution(info=info, trans=trans, src=src, bem=bem,
-                                meg=True, eeg=False, mindist=5.0, n_jobs=1,
-                                verbose=True)
-    return fwd
+    # Make sure the directory exists
+    if not dst_dir.exists():
+        os.makedirs(dst_dir)
+
+    return subject, subjects_dir, info_path, dst_dir
+
+
+if __name__ == "__main__":
+    subject, subjects_dir, info_path, dst_dir = get_args()
+    info = read_info(info_path)
+    trans = get_trans(subject, subjects_dir, info)
+    write_trans(dst_dir, trans, overwrite=True)
